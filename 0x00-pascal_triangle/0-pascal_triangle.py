@@ -21,10 +21,11 @@ def pascal_triangle(n):
 
     for i in range(n - 1):
         # Calculate the next row of Pascal's Triangle based on the previous row
-        temp = [0] + result[-1] + [0]  # Add padding of zeros to handle edge elements
+        temp = [0] + result[-1] + [0]
+        # Add padding of zeros to handle edge elements
         next_row = []
         for j in range(len(result[-1]) + 1):
-            # Calculate each element in the next row by summing adjacent elements in the previous row
+            # Calculate each element in the next row
             next_row.append(temp[j] + temp[j + 1])
         result.append(next_row)  # Add the next row to Pascal's Triangle
 
